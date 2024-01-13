@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
+:root {
+    --main-color: #00c9a5;
+    --nav-color: #00afa5;
+    --bg-color: #e8f3f1;
+    --black-: #2f4858;
+    --border: .1rem solid var(--card-color);
+    --box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in;
+}
+section{
+    padding: 2rem 3;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hiden;
+}
+body{
+    background-color: var(--bg-color);
+}
+.title{
+    text-shadow: 2px 2px 0 var(--card-color), -2px -2px 0 var(--card-color), -2px 2px 0 var(--card-color), 2px -2px 0 var(--card-color);
+    text-align: center;
+    color: #3d405b;
+    text-transform: uppercase;
+    padding: 5rem 0;
+    font-size: 4rem;
+}
+.title span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.navbar{
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16vh;
+    z-index: 1000;
+}
+.navbar .logocontent{
+    display: flex;
+    align-items: center;
+}
+.navbar .logocontent .logo img{
+    height: 9rem;
+    border-radius: 50%;
+}
+.navbar .logocontent .logoname{
+    color: var(--bg-color);
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+nav{
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    color: var(--black-);
+    border-top: 0.3rem solid var(--black-);
+    border-bottom: 0.3rem solid var(--black-);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: transform 1.15s;
+}
+/* home section starts */
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 84vh;
+    margin-top: 16vh;
+    background-color: aqua;
+    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url("pictures/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.hero {
+    width: 60rem;
+}
+.home .hero h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.home .hero p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    color: #e8f3f1;
+}
+.home .hero .btn{
+    height: 3rem;
+}
+section{
+    padding: 5rem;
+}
+.btn {
+    background-color: var(--nav-color);
+    color: #fff;
+    font-size: 1.7rem;
+    padding: .7rem 2.4rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: .5rem;
+}
+
+/* cakes section */
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.cakes .wrapper .cake-card{
+    background-color: #81b29a    ;
+    padding: 3rem 2rem;
+    text-align: center;
+    transform-origin: top center;
+    transition: transform 0.15s;
+}
+.cakes .wrapper .cake-card:hover{
+    transform: scaleY(1.05);
+    background-color: var(--black-);
+}
+.cakes .wrapper .cake-card:hover *:not(a){
+    color: var(--main-color);
+}
+.cakes .wrapper .cake-card img {
+    width: 100%;
+}
+.cakes .wrapper .cake-card h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+.cakes .wrapper .cake-card .price{
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+/* bread section */
+.breads .wrapper .bread-card{
+    text-align: center;
+    background-color: #f2cc8f;
+    padding: 2rem;
+    border: var(--border);
+    transition: transform 0.15s;
+}
+.breads .wrapper .bread-card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.breads .wrapper .bread-card img {
+    width: 100%;
+}
+.breads .wrapper .bread-card h3 {
+    color: #ffff;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+.breads .wrapper .bread-card .price{
+    color: #ffff;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+.special .wrapper .special-card{
+    text-align: center;
+    background-color: #e07a5f;
+    padding: 3rem 2rem;
+    border: var(--border);
+    transition: transform 0.15s;
+}
+.special .wrapper .special-card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.special .wrapper .special-card img {
+    width: 100%;
+}
+.special .wrapper .special-card h3 {
+    color: #ffff;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+.special .wrapper .special-card .price{
+    color: #ffff;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/* responsive */
+
+@media(max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px){
+    .logoname{
+        margin-left: 1rem;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        height: 30%;
+        width: 100%;
+        background: #f2cc8f;
+        top: 9rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 20px;
+        line-height: 25px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover{
+        color: var(--black-);
+    }
+    #check:checked~ ul{
+        left: 0;
+    }
+}
+/* mobile responsive */
+@media(max-width:431px){
+    .home{
+        width: 100%;
+        margin-top: 0;
+        padding: 2vw;
+        align-items: baseline;
+    }
+    .navbar{
+        padding: 5px;
+        height: auto;
+        
+    }
+
+    .navbar .logocontent .logoname {
+        font-size: 20px;
+    }
+
+    .navbar .logocontent .logo img {
+        width: 60px;
+        height: 60px;
+        margin-right: 2px;
+    }
+    .home .hero h3{
+        font-size: 48px;
+        margin-top: 300px;
+    }
+    ul{
+        height: 35vh;
+    }
+}
+/* about */
+
+.about .container{
+    display: flex;
+    justify-content: center;
+    background-color: #3d405b;
+    flex-wrap: wrap;
+}
+.about .container .img{
+    flex: 1 1 45rem;
+}
+.about .container .img img{
+    width: 100%;
+}
+.about .container .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .container .content p{
+    font-size: 1.6rem;
+    color: #ffff;
+    padding: 1rem 0;
+    line-height: 2.2rem;
+}
+/* footer */
+.footer{
+    background-color: var(--nav-color);
+    padding: 20px;
+    text-align: center;
+}
+.footer p{
+    color: #fff;
+}
+.create{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}

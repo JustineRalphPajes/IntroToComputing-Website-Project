@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
+:root {
+    --main-color: #00c9a5;
+    --nav-color: #00afa5;
+    --bg-color: #e8f3f1;
+    --black-: #2f4858;
+    --border: .1rem solid var(--card-color);
+    --box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in;
+}
+section{
+    padding: 2rem 3;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hiden;
+}
+body{
+    background-color: var(--bg-color);
+}
+.navbar{
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16vh;
+    z-index: 1000;
+}
+.navbar .logocontent{
+    display: flex;
+    align-items: center;
+}
+.navbar .logocontent .logo img{
+    height: 9rem;
+    border-radius: 50%;
+}
+.navbar .logocontent .logoname{
+    color: var(--bg-color);
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+nav{
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    color: var(--black-);
+    border-top: 0.3rem solid var(--black-);
+    border-bottom: 0.3rem solid var(--black-);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: transform 1.15s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(pictures/bg.jpg);
+    background-size: cover;
+}
+.contact .content1{
+    max-width: 800px;
+    text-align: center;
+    margin-top: 10%;
+}
+.contact .content1 h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffff;
+}
+.contact .content1 p{
+    font-weight: 300;
+    color: #ffff;
+    font-size: 15px;
+}
+.container1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container1 .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container1 .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container1 .contactinfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container1 .contactinfo .box .text{
+    display: flex;
+    margin: 20px;
+    font-size: 16px;
+    color: #ffff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container1 .contactinfo .box .text h3{
+    color: var(--main-color);
+    font-weight: bold;
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #ffff;
+}
+.contactform h2{
+    font-size: 30px;
+    color: var(--black-);
+    font-weight: 500;
+}
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.contactform .inputBox input,
+.contactform .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px var(--black-);
+    outline: none;
+    resize: none;
+}
+.contactform .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;          
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span{
+    color: var(--main-color);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+.footer{
+    background-color: var(--nav-color);
+    padding: 20px;
+    text-align: center;
+}
+.footer p{
+    color: #fff;
+}
+.create{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media(max-width:991px){
+    .contact{
+        padding: 10px;
+    }
+    .contact .content1{
+        margin-top: 20rem;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    .container1 .contactinfo{
+        margin-bottom: 40px;
+    }
+    .container1 .contactform,
+    .contactform{
+        width: 100%;
+    }
+    .content1{
+        margin-top: 30px;
+    }
+}
+@media(max-width:320px){
+    ul{
+        top:90px
+    }
+    .contact{
+        width: 100%;
+    }
+}
+@media(max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px){
+    .logoname{
+        margin-left: 1rem;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        height: 30%;
+        width: 100%;
+        background: #f2cc8f;
+        top: 16rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 20px;
+        line-height: 25px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover{
+        color: var(--black-);
+    }
+    #check:checked~ ul{
+        left: 0;
+    }
+}
+@media(max-width:431px){
+    .navbar{
+        padding: 5px;
+        height: auto;
+        
+    }
+    .navbar .logocontent .logoname {
+        font-size: 20px;
+    }
+    .navbar .logocontent .logo img {
+        width: 60px;
+        height: 60px;
+        margin-right: 2px;
+    }
+    ul{
+        top:90px;
+        height: 45vh;
+    }
+    .contact{
+        position: absolute;
+    }
+}
